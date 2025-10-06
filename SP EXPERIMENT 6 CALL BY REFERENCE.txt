@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+void swapReference(int *x, int *y) {
+    int temp = *x;
+    *x = *y;
+    *y = temp;
+}
+
+int main() {
+    int a = 5, b = 10;
+
+    printf("Before swapReference: a = %d, b = %d\n", a, b);
+    swapReference(&a, &b); 
+    printf("After swapReference: a = %d, b = %d\n", a, b);
+
+    return 0;
+}
